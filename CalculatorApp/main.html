@@ -3,9 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Calculator</title>
 </head>
 <body>
-    
+    <div class="Calculator-Container">
+        <div class="display">
+            <input type="text" id="result" readonly placeholder="0">
+        </div>
+        <div class="Number-Container">
+            <button  class="btn" onclick="appendvalue('1')">1</button>
+            <button class="btn"  onclick="appendvalue('2')">2</button>
+            <button class="btn" onclick="appendvalue('3')">3</button>
+            <button class="btn operator" id="addition" onclick="appendvalue('+')">+</button>
+            <button class="btn" onclick="appendvalue('4')">4</button>
+            <button class="btn" onclick="appendvalue('5')">5</button>
+            <button class="btn" onclick="appendvalue('6')">6</button>
+            <button class="btn operator" id="substract" onclick="appendvalue('-')">-</button>
+            <button class="btn" onclick="appendvalue('7')">7</button>
+            <button class="btn" onclick="appendvalue('8')">8</button>
+            <button class="btn" onclick="appendvalue('9')">9</button>
+            <button  class="btn operator"id="multiply" onclick="appendvalue('*')">*</button>
+            <button class="btn" onclick="appendvalue('0')">0</button>
+            <button  class="btn operator"id="equal" onclick=calculate()>=</button>
+            <button class="btn operator" id="clear" onclick=clearResult()>C</button>
+            <button  class="btn operator"id="division" onclick="appendvalue('/')">/</button>
+            <button  class="btn operator"id="return" onclick=deleteChar()>R</button>
+        </div>
+    </div>
 </body>
+<script src="logique.js"></script>
 </html>
