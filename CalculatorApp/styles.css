@@ -1,5 +1,104 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #e4b7f8; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.Calculator-Container {
+    width: 420px;
+    height: auto;
+    background-color: #ff8ac6;
+    border-radius: 15px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    overflow: hidden;
+    padding: 20px;
+}
+
+.display {
+    margin-bottom: 15px;
+}
+.display input {
+    width: 100%;
+    height: 60px;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #f9fafb;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 8px; 
+    text-align: right;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+/* Container for buttons */
+.Number-Container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* Button styles */
+.btn {
+    background-color: #ff45bb;
+    border: none;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+}
+
+/* Operator buttons */
+.operator {
+    background-color: #ff930f;
+}
+
+.btn:hover {
+    background-color: #ff8aff; 
+    transform: scale(1.05);
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+/* Scientific buttons container */
+#scientific-buttons {
+    grid-column: span 4; 
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* Specific scientific buttons style */
+#scientific-buttons .btn {
+    background-color: #cb63ff; 
+}
+h1{
+    color: #ffffff;
+    margin: 20px;
+}
+/* Responsive design */
+@media (max-width: 400px) {
+    .Calculator-container {
+        width: 90%; 
+    }
+    .display input {
+        font-size: 20px; 
+    }
+    .btn {
+        padding: 10px;
+        font-size: 16px;
+    }
 }

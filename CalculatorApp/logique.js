@@ -1,9 +1,22 @@
 function isOperator(char) {
-    return ["+", "-", "*", "/", "÷", "×"].includes(char);
+    return ["+", "-", "*", "/", "÷", "×", "**"].includes(char);
 }
 function clearResult() {
     document.getElementById("result").value = ""; // Reset the display to empty
 }
+function toggleScientific() {
+    const sciButtons = document.getElementById("scientific-buttons");
+    const toggleButton = document.getElementById("toggle-sci");
+
+    if (sciButtons.style.display === "none") {
+        sciButtons.style.display = "grid"; // Show scientific buttons
+        toggleButton.innerText = "B"; // Change the toggle button to "B" (Basic mode)
+    } else {
+        sciButtons.style.display = "none"; // Hide scientific buttons
+        toggleButton.innerText = "S"; // Change it back to "S" (Scientific mode)
+    }
+}
+
 function deleteChar() {
     let result = document.getElementById("result").value;
     document.getElementById("result").value = result.substring(0, result.length - 1);

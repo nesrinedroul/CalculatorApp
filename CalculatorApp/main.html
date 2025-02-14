@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <title>Calculator</title>
 </head>
 <body>
     <div class="Calculator-Container">
+        <h1>
+            Nesrine's Calculator
+        </h1>
         <div class="display">
-            <input type="text" id="result" readonly placeholder="0">
+            <input type="text" id="result" placeholder="0">
         </div>
         <div class="Number-Container">
             <button  class="btn" onclick="appendvalue('1')">1</button>
@@ -29,6 +32,20 @@
             <button class="btn operator" id="clear" onclick=clearResult()>C</button>
             <button  class="btn operator"id="division" onclick="appendvalue('/')">/</button>
             <button  class="btn operator"id="return" onclick=deleteChar()>R</button>
+            <button class="btn operator" id="toggle-sci" onclick="toggleScientific()">S</button>
+            <button class="btn" onclick="appendvalue('(')">(</button>
+            <button class="btn" onclick="appendvalue(')')">)</button>
+        <div id="scientific-buttons" style="display: none;">
+                <button class="btn" onclick="appendvalue('Math.sin(')">sin</button>
+                <button class="btn" onclick="appendvalue('Math.cos(')">cos</button>
+                <button class="btn" onclick="appendvalue('Math.tan(')">tan</button>
+                <button class="btn" onclick="appendvalue('Math.log(')">log</button>
+                <button class="btn" onclick="appendvalue('Math.exp(')">exp</button>
+                <button class="btn" onclick="appendvalue('Math.PI')">π</button>
+                <button class="btn" onclick="appendvalue('Math.E')">e</button>
+                <button class="btn" onclick="appendvalue('**')">xⁿ</button>
+                <button class="btn" onclick="appendvalue('Math.sqrt(')">√</button>
+        </div>
         </div>
     </div>
 </body>
